@@ -1,6 +1,6 @@
 # JSON To Neo4j
 
-This is a script that reads from a json file output by the script in the [Aztec-Network](https://github.com/BD2K-Aztec/Aztec-Network) repository.
+This is a script that reads from a json file output by [Dibakar](https://github.com/Vasuji)'s Clinical Case Report parser.
 ## Prerequisite
 Python 3.3+, neo4j 3.3.x, neomodel package
 
@@ -12,18 +12,23 @@ The format of the JSON file is
 {
     "nodes": [
         {
-            "group": int,
             "id": str,
-            "protein": str,
-            "score": float
+            "type": str,
+            "name": str,
+            "icolor": str,
+            "degree": int
         },
         ...
     ],
     "links": [
-        {
+        {            
+            "id": str,
+            "name": str,
+            "value": float,
             "source": str,
+            "source_name": str,
             "target": str,
-            "value": int
+            "target_name": str
         },
         ...
     ]
